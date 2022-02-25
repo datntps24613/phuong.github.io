@@ -1,0 +1,1 @@
+jQuery.noConflict(),function(E){E.GSET={},E.GSET.MODEL={pc:"(min-width: 731px)",sp:"only screen and (max-width : 730px)"},E.GSET.MOVE_ELEM=[{elem:".nav-list",pc:[".navigation-main","append"],sp:["#sma-cnavi","append"]}],E.GSET.MODEL_CHANGE_BASE_MODEL="pc",E.GSET.MODEL_CHANGE_SP_MODEL="sp"}(jQuery);

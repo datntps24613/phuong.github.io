@@ -1,0 +1,29 @@
+
+(function ($) {
+    
+    $(document).ready(function(){
+        if($('.description-container')[0].scrollHeight > $('.description-container').height()) {
+            $('.description-buttons .more').show();
+        }
+        
+        $('.description-buttons .more').on('click',function(e){
+            e.preventDefault();
+            $('.description-main .description-container').css({'overflow': 'visible', 'maxHeight': '100%'});
+            $('html, body').animate({
+                scrollTop: $(".description-main .description-container").offset().top+500
+            }, 50);
+            $(".description-main .description-buttons .less").show();
+            $(".description-main .description-buttons .more").hide();
+            return false;
+        });
+        
+        $('.description-buttons .less').on('click',function(e){
+            e.preventDefault();
+            $('.description-main .description-container').css({'overflow': 'hidden', 'maxHeight': '500px'});
+            $(".description-main .description-buttons .less").hide();
+            $(".description-main .description-buttons .more").show();
+            return false;
+        });
+    });
+    
+})(jQuery);
